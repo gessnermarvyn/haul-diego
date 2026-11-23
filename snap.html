@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snap Haul — Haul Diego</title>
+  <meta name="description" content="Show us the pile. Get an exact junk removal price by text, usually within the hour, Mon–Sat.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Proudly serving San Diego County · Mon–Sat, 7am–7pm</span>
+      <a href="snap.html">Snap Haul: send a photo for a fast price →</a>
+    </div>
+  </div>
+  <header class="site-header" id="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="index.html"><img src="img/logo.svg" width="36" height="36" alt=""> HAUL DIEGO</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
+      <nav class="nav" id="site-nav">
+        <a href="index.html#services">Services</a>
+        <a href="quote.html">Rough quote</a>
+        <a href="service-area.html">Service area</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="snap.html" aria-current="page">Snap Haul</a>
+        <a class="btn btn-orange" href="book.html">Book a pickup</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="section-kicker">Snap Haul</p>
+        <h1>Show us the pile. Get an exact price.</h1>
+        <p>We usually reply within the hour, Mon–Sat.</p>
+      </div>
+    </div>
+
+    <div class="wrap snap-grid">
+      <form id="snap-form" class="step-card" novalidate>
+        <div class="drop" id="drop" tabindex="0" role="button" aria-label="Upload up to 6 photos">
+          <strong>Add up to 6 photos</strong>
+          <p class="help">Click or drop images here. JPG, PNG or HEIC, from your phone is fine.</p>
+          <input id="files" type="file" accept="image/*" multiple hidden>
+        </div>
+        <div class="previews" id="previews"></div>
+        <p class="err-msg" id="file-err" hidden></p>
+
+        <div class="field" style="margin-top:20px">
+          <label for="whats">What's in the photo? <span style="font-weight:500;color:var(--muted)">(optional)</span></label>
+          <textarea id="whats" name="whats" rows="3" placeholder="Garage cleanout, old couch, yard pile…"></textarea>
+        </div>
+        <div class="field">
+          <label for="first">First name</label>
+          <input id="first" name="first" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="mobile">Mobile number</label>
+          <input id="mobile" name="mobile" type="tel" required autocomplete="tel" placeholder="(619) 555-0100">
+        </div>
+        <p class="help">Photos are checked automatically before they reach our crew. Only photos of items to haul are accepted.</p>
+        <p style="margin-top:18px">
+          <button class="btn btn-orange btn-lg" type="submit">Send for a price</button>
+          <span class="demo-note" style="margin-left:10px">Demo</span>
+        </p>
+        <p class="err-msg" id="form-err" hidden></p>
+      </form>
+
+      <div class="confirm" id="snap-done" hidden>
+        <p class="demo-note">Demo only</p>
+        <h2>Your photos would go to the quote inbox.</h2>
+        <p style="color:var(--muted);max-width:42ch;margin:0 auto 18px">Nothing has been sent. On the live site, the crew would text an exact price from the business line, usually within the hour, Monday through Saturday.</p>
+        <p class="placeholder" style="text-align:left;margin-bottom:22px">[PLACEHOLDER: Connect this form to the owner's quote inbox and business text line.]</p>
+        <a class="btn btn-orange" href="book.html">Or book a pickup</a>
+      </div>
+
+      <aside>
+        <div class="step-card">
+          <h2 style="font-size:1.2rem;margin-bottom:10px">How Snap Haul works</h2>
+          <ol style="margin:0;padding-left:18px;color:var(--muted);line-height:1.7">
+            <li>Take a few clear photos of the pile, from a step back.</li>
+            <li>Send them with your name and mobile number.</li>
+            <li>We text an exact, all-in price from our business line.</li>
+            <li>If you like it, pick a day and a two-hour window.</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html"><img src="img/logo.svg" width="36" height="36" alt=""> HAUL DIEGO</a>
+          <p style="margin-top:12px">Junk removal and cleanouts · San Diego, CA</p>
+          <p style="margin-top:8px">hello@[yourdomain].com</p>
+          <p>Mon–Sat 7am–7pm</p>
+        </div>
+        <div>
+          <h3>Book</h3>
+          <ul>
+            <li><a href="quote.html">Rough quote</a></li>
+            <li><a href="snap.html">Snap Haul</a></li>
+            <li><a href="book.html">Book a pickup</a></li>
+            <li><a href="service-area.html">Service area</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#how">How it works</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal"><span>Concept site. Snap Haul is a demo.</span><span>[PLACEHOLDER: Impressum / Privacy / Terms]</span></div>
+    </div>
+  </footer>
+  <nav class="mobile-bar" aria-label="Quick actions">
+    <a class="btn btn-ghost" href="quote.html">Quote</a>
+    <a class="btn btn-ghost" href="snap.html">Send photo</a>
+    <a class="btn btn-orange" href="book.html">Book</a>
+  </nav>
+  <script src="js/main.js"></script>
+  <script src="js/snap.js"></script>
+</body>
+</html>

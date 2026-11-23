@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rough quote — Haul Diego</title>
+  <meta name="description" content="Get a rough junk removal quote for San Diego County. We confirm the exact price on site before we lift anything.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Proudly serving San Diego County · Mon–Sat, 7am–7pm</span>
+      <a href="snap.html">Snap Haul: send a photo for a fast price →</a>
+    </div>
+  </div>
+  <header class="site-header" id="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="index.html"><img src="img/logo.svg" width="36" height="36" alt=""> HAUL DIEGO</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
+      <nav class="nav" id="site-nav">
+        <a href="index.html#services">Services</a>
+        <a href="quote.html" aria-current="page">Rough quote</a>
+        <a href="service-area.html">Service area</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="snap.html">Snap Haul</a>
+        <a class="btn btn-orange" href="book.html">Book a pickup</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="section-kicker">Rough quote · San Diego area</p>
+        <h1>What needs to be hauled?</h1>
+        <p>Three quick steps. We confirm the exact price on site before we lift anything.</p>
+        <p class="example-tag" style="margin-top:14px">Example prices only — not a final quote</p>
+      </div>
+    </div>
+
+    <div class="wrap quote-layout">
+      <div>
+        <section class="step-card" id="step-space">
+          <h2>Step 1 · Spaces</h2>
+          <p class="hint">Pick the space that best matches the job.</p>
+          <div class="choice-grid" id="spaces"></div>
+        </section>
+
+        <section class="step-card" id="step-full">
+          <h2>Step 2 · How full?</h2>
+          <p class="hint" id="full-hint">Think in bays. A one-car garage is one bay.</p>
+          <div class="bay-visual" id="bay-visual" hidden>
+            <p>Bay 1 and Bay 2 fill as you choose how packed the space is.</p>
+            <div class="bays">
+              <div class="bay" id="bay1"><span class="fill" style="height:0"></span><span class="lbl">Bay 1</span></div>
+              <div class="bay" id="bay2"><span class="fill" style="height:0"></span><span class="lbl">Bay 2</span></div>
+            </div>
+          </div>
+          <div class="choice-grid" id="fullness"></div>
+        </section>
+
+        <section class="step-card" id="step-special">
+          <h2>Step 3 · Special items</h2>
+          <p class="hint">Add anything that usually has an extra fee. Counts can be more than one.</p>
+          <div id="counters"></div>
+          <h3 style="margin:20px 0 8px;font-size:1rem">Heavy / awkward</h3>
+          <div id="heavy"></div>
+          <h3 style="margin:20px 0 8px;font-size:1rem">Custom price — we'll call you</h3>
+          <div id="custom"></div>
+        </section>
+      </div>
+
+      <aside class="quote-side" aria-live="polite">
+        <h2>Your rough quote</h2>
+        <div class="quote-lines" id="quote-lines"></div>
+        <div class="quote-total"><span>Total</span><span id="quote-total">$0</span></div>
+        <p class="meta" id="quote-crew">Crew · 2 people</p>
+        <p class="meta" id="quote-time">Time on site · —</p>
+        <p class="meta" id="quote-custom" hidden></p>
+        <div class="btns">
+          <a class="btn btn-orange btn-block" id="book-link" href="book.html">Book this pickup</a>
+          <a class="btn btn-ghost-light btn-block" href="snap.html">Snap Haul for an exact price</a>
+        </div>
+        <p class="fine">Includes labor, hauling, dump fees and sweep-up. These are example prices used in the concept. Real prices come from the owner's own rates. We confirm the exact price on site before we lift anything.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html"><img src="img/logo.svg" width="36" height="36" alt=""> HAUL DIEGO</a>
+          <p style="margin-top:12px">Junk removal and cleanouts · San Diego, CA</p>
+          <p style="margin-top:8px">hello@[yourdomain].com</p>
+          <p>Mon–Sat 7am–7pm</p>
+        </div>
+        <div>
+          <h3>Book</h3>
+          <ul>
+            <li><a href="quote.html">Rough quote</a></li>
+            <li><a href="snap.html">Snap Haul</a></li>
+            <li><a href="book.html">Book a pickup</a></li>
+            <li><a href="service-area.html">Service area</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#how">How it works</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <span>Concept site. Example prices only.</span>
+        <span>[PLACEHOLDER: Impressum / Privacy / Terms]</span>
+      </div>
+    </div>
+  </footer>
+  <nav class="mobile-bar" aria-label="Quick actions">
+    <a class="btn btn-ghost" href="quote.html">Quote</a>
+    <a class="btn btn-ghost" href="snap.html">Send photo</a>
+    <a class="btn btn-orange" href="book.html">Book</a>
+  </nav>
+  <script src="js/main.js"></script>
+  <script src="js/quote.js"></script>
+</body>
+</html>

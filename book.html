@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a pickup — Haul Diego</title>
+  <meta name="description" content="Book a junk removal pickup in San Diego County. Pick a day and a two-hour window.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Proudly serving San Diego County · Mon–Sat, 7am–7pm</span>
+      <a href="snap.html">Snap Haul: send a photo for a fast price →</a>
+    </div>
+  </div>
+  <header class="site-header" id="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="index.html"><img src="img/logo.svg" width="36" height="36" alt=""> HAUL DIEGO</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
+      <nav class="nav" id="site-nav">
+        <a href="index.html#services">Services</a>
+        <a href="quote.html">Rough quote</a>
+        <a href="service-area.html">Service area</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="snap.html">Snap Haul</a>
+        <a class="btn btn-orange" href="book.html" aria-current="page">Book a pickup</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-hero">
+      <div class="wrap book-shell" style="max-width:720px">
+        <p class="section-kicker">Book a pickup</p>
+        <h1 id="step-title">What needs to go?</h1>
+        <p id="step-lead">Step 1 of 4. Choose the job type, then we'll check your ZIP.</p>
+        <div class="progress" id="progress" aria-hidden="true"><span class="is-on"></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+
+    <div class="wrap book-shell">
+      <form id="book-form" class="step-card" novalidate>
+        <div data-step="1">
+          <div class="choice-grid" id="job-types"></div>
+        </div>
+        <div data-step="2" hidden>
+          <div class="field">
+            <label for="zip">Pickup ZIP code</label>
+            <input class="text-input" id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="92109" autocomplete="postal-code">
+            <p class="help">We serve San Diego County. Try 92109, 91942, 91910 or 92024.</p>
+            <button class="btn btn-navy" type="button" id="check-zip" style="margin-top:10px">Check</button>
+            <p class="ok-msg" id="zip-ok" hidden></p>
+            <p class="err-msg" id="zip-err" hidden></p>
+          </div>
+        </div>
+        <div data-step="3" hidden>
+          <h2 style="font-size:1.1rem;margin-bottom:10px">Pick a day</h2>
+          <p class="hint" style="color:var(--muted);margin-bottom:12px">We run Monday through Saturday, 7am–7pm. Choose a two-hour window.</p>
+          <div class="days" id="days"></div>
+          <h2 style="font-size:1.1rem;margin:22px 0 10px">Two-hour window</h2>
+          <div class="windows" id="windows"></div>
+        </div>
+        <div data-step="4" hidden>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Mobile number</label>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(619) 555-0100">
+          </div>
+          <div class="field">
+            <label for="email">Email <span style="font-weight:500;color:var(--muted)">(optional)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="notes">Anything we should know? <span style="font-weight:500;color:var(--muted)">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Gate code, stairs, or where to park."></textarea>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap">
+          <button class="btn btn-ghost" type="button" id="back-btn" hidden>Back</button>
+          <button class="btn btn-orange" type="button" id="next-btn">Continue</button>
+        </div>
+      </form>
+
+      <div class="confirm" id="confirm" hidden>
+        <p class="demo-note">Demo only</p>
+        <h2>We have your request — this is a demo.</h2>
+        <p style="color:var(--muted);max-width:46ch;margin:0 auto 18px">Nothing has been scheduled and no message has been sent. When this site goes live, this step should go to the owner's real booking or phone line.</p>
+        <p id="confirm-summary" style="margin-bottom:22px"></p>
+        <p class="placeholder" style="margin-bottom:22px;text-align:left">[PLACEHOLDER: Replace this confirmation with a real booking process, calendar, or a call-back from the crew.]</p>
+        <a class="btn btn-orange" href="index.html">Back to the home page</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html"><img src="img/logo.svg" width="36" height="36" alt=""> HAUL DIEGO</a>
+          <p style="margin-top:12px">Junk removal and cleanouts · San Diego, CA</p>
+          <p style="margin-top:8px">hello@[yourdomain].com</p>
+          <p>Mon–Sat 7am–7pm</p>
+        </div>
+        <div>
+          <h3>Book</h3>
+          <ul>
+            <li><a href="quote.html">Rough quote</a></li>
+            <li><a href="snap.html">Snap Haul</a></li>
+            <li><a href="book.html">Book a pickup</a></li>
+            <li><a href="service-area.html">Service area</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#how">How it works</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal"><span>Concept site. Booking is a demo.</span><span>[PLACEHOLDER: Impressum / Privacy / Terms]</span></div>
+    </div>
+  </footer>
+  <nav class="mobile-bar" aria-label="Quick actions">
+    <a class="btn btn-ghost" href="quote.html">Quote</a>
+    <a class="btn btn-ghost" href="snap.html">Send photo</a>
+    <a class="btn btn-orange" href="book.html">Book</a>
+  </nav>
+  <script src="js/zips.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/book.js"></script>
+</body>
+</html>
